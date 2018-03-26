@@ -1,4 +1,4 @@
-package com.xsr.demo;
+package com.xsr.utils;
 
 import org.springframework.beans.TypeMismatchException;
 import org.springframework.beans.propertyeditors.PropertiesEditor;
@@ -29,11 +29,9 @@ public class MyDateEditor extends PropertiesEditor {
         SimpleDateFormat sdf=null;
         if (Pattern.matches("^\\d{4}-\\d{2}-\\d{2}$", source)) {
             sdf=new SimpleDateFormat("yyyy-MM-dd");
-        }else if (Pattern.matches("^\\d{4}/\\d{2}/\\d{2}$", source)) {
-            sdf=new SimpleDateFormat("yyyy/MM/dd");
-        }else if (Pattern.matches("^\\d{4}\\d{2}\\d{2}$", source)) {
-            sdf=new SimpleDateFormat("yyyyMMdd");
-        }else {
+        }else if(Pattern.matches("^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}$", source)) {
+            sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        }else{
             throw new TypeMismatchException("", Date.class);
         }
         return sdf;

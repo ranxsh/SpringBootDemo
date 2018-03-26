@@ -1,4 +1,4 @@
-package com.xsr.demo;
+package com.xsr;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
