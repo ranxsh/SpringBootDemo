@@ -2,6 +2,7 @@ package com.xsr.web;
 
 import com.xsr.utils.MyDateEditor;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
 

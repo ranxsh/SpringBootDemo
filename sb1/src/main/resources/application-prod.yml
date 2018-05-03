@@ -1,0 +1,6 @@
+com
+  xsr
+    blog
+      name=祥先生
+      title=Spring Boot教程
+      desc=${com.xsr.blog.name}正在努力写《${com.xsr.blog.title}》
